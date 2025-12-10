@@ -3,3 +3,8 @@ numpy
 scipy
 matplotlib
 jupyter
+complexPyTorch
+pandas
+scikit-learn
+seaborn
+tqdm
