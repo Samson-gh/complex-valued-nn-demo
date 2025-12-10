@@ -6,9 +6,11 @@ class ComplexLinear(nn.Module):
     """Complex-valued linear layer scaffold."""
     def __init__(self, in_features, out_features, bias=True):
         super().__init__()
-        # TODO: Implement real/imag parameter initialization
-
-
+        self.real_feat = torch.nn.Linear(in_features, out_features, bias=bias)
+        self.imag_feat = torch.nn.Linear(in_features, out_features, bias=bias)
+        
 def forward(self, x):
-# TODO: Implement complex matmul
-    raise NotImplementedError
+    # return complex_matmul(x, self.real_feat.weight, self.imag_feat.weight)
+    # TODO: Implement complex matmul and bias addition
+
+    raise NotImplementedError("Forward method not implemented yet.")
