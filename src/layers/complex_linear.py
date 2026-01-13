@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from src.layers.apply_complex import apply_complex
 
 
 class ComplexLinear(nn.Module):
@@ -10,7 +11,7 @@ class ComplexLinear(nn.Module):
         self.imag_feat = torch.nn.Linear(in_features, out_features, bias=bias)
         
 def forward(self, x):
-    # return complex_matmul(x, self.real_feat.weight, self.imag_feat.weight)
+    apply_complex(x, self.real_feat.weight, self.imag_feat.weight)
     # TODO: Implement complex matmul and bias addition
 
     raise NotImplementedError("Forward method not implemented yet.")
